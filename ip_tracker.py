@@ -55,5 +55,20 @@ root.geometry("440x460")
 root.resizable(False, False)
 root.config(bg=BG)
 
+# -- Title --
+tk.Label(root, text="IP Address Tracker", font=("Georgia", 16, "bold"),
+         bg=BG, fg=ACCENT).pack(pady=(20, 2))
+tk.Label(root, text="geolocation lookup tool",
+         font=("Georgia", 9, "italic"), bg=BG, fg=SOFT).pack()
+tk.Frame(root, bg=ACCENT, height=1).pack(fill="x", padx=30, pady=10)
 
+# -- Input --
+tk.Label(root, text="Enter IP Address:", font=("Georgia", 10),
+         bg=BG, fg=SOFT).pack()
+
+entry = tk.Entry(root, width=26, font=("Courier", 12),
+                 bg=PANEL, fg=TEXT, insertbackground=ACCENT,
+                 relief="flat", highlightthickness=1,
+                 highlightbackground=SOFT, highlightcolor=ACCENT)
+entry.pack(ipady=5, pady=6)
 root.mainloop()
