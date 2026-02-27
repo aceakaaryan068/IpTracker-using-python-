@@ -109,4 +109,8 @@ for i, field in enumerate(fields):
                    bg=row_bg, fg=TEXT, anchor="w", width=26, padx=6)
     val.grid(row=i, column=1, sticky="nsew", pady=2)
     value_labels.append(val)
+
+    # -- Footer --
+tk.Label(root, text="ip-api.com  ·  educational use only",
+         font=("Georgia", 7), bg=BG, fg=SOFT).pack(pady=10)
 root.mainloop()
